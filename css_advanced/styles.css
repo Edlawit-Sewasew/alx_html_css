@@ -185,3 +185,144 @@ main section:nth-of-type(2) p {
     font-size: 14px;
     opacity: 0.9;
 }
+section {
+    padding: 100px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+section > h2 {
+    font-size: 36px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+section > div {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+/* Each tutorial card (your <div> that contains img, h3, p, etc.) */
+section > div > div {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+section > div > div:hover {
+    transform: translateY(-12px);
+}
+
+/* Thumbnail + Play button */
+section > div > div > img:first-child {
+    width: 100%;
+    display: block;
+}
+
+section > div > div::before {
+    content: "\f04b";                         /* FontAwesome play icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #c271ff;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.25);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Title */
+section > div > div > h3 {
+    color: #c271ff !important;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 24px 20px 8px;
+}
+
+/* Description */
+section > div > div > p {
+    color: #777;
+    font-size: 14px;
+    margin: 0 20px 20px;
+    line-height: 1.5;
+}
+
+/* Author row */
+section > div > div > div:nth-child(4) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+    margin-bottom: 16px;
+}
+
+section > div > div > div:nth-child(4) img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+section > div > div > div:nth-child(4) h4 {
+    color: #c271ff;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Rating + Duration row */
+section > div > div > div:nth-child(5) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 24px;
+    font-size: 14px;
+}
+
+section > div > div > div:nth-child(5) > div i {
+    color: #c271ff;
+    margin-right: 3px;
+}
+
+/* Last star = empty */
+section > div > div > div:nth-child(5) > div i:nth-child(5) {
+    color: #e0e0e0;
+}
+
+section > div > div > p:last-child {
+    color: #c27199;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    section > div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px) {
+    section > div {
+        grid-template-columns: 1fr;
+    }
+    section > h2 {
+        font-size: 28px;
+    }
+}
