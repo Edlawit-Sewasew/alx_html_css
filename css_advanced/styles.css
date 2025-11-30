@@ -142,3 +142,46 @@ main > section:first-of-type p{
     font-size:13px;
     opacity:.8;
 }
+main section:nth-of-type(2) {
+    background-color: #c36dee;            /* purple background like figma */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 60px;
+    color: #fff;
+}
+
+/* Image styling (round picture) */
+main section:nth-of-type(2) img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fff;
+}
+
+/* Text block beside the image */
+main section:nth-of-type(2) div:nth-child(2) {
+    max-width: 600px;
+}
+
+main section:nth-of-type(2) blockquote {
+    font-size: 18px;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Person Name */
+main section:nth-of-type(2) h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Role/position text */
+main section:nth-of-type(2) p {
+    font-size: 14px;
+    opacity: 0.9;
+}
