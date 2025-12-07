@@ -6,10 +6,10 @@
 
 body {
     font-family: "Source Sans Pro", sans-serif;
-    color: white;  /* only affects text that has no other color */
+    color: white;
 }
 
-/* Container (centers the content) */
+/* Container */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -56,7 +56,6 @@ body {
     max-width: 700px;
 }
 
-/* Titles */
 .hero h1 {
     font-size: 40px;
     font-weight: 700;
@@ -69,14 +68,12 @@ body {
     margin-bottom: 30px;
 }
 
-/* CTA BUTTON */
 .cta-btn {
     background-color: #FF6565;
     padding: 12px 35px;
     border: none;
     border-radius: 25px;
     color: white;
-    font-size: 14px;
     cursor: pointer;
     margin-bottom: 30px;
 }
@@ -85,7 +82,6 @@ body {
     opacity: 0.9;
 }
 
-/* Paragraph */
 .hero p {
     font-size: 14px;
     line-height: 1.6;
@@ -94,7 +90,7 @@ body {
 }
 
 /* --------------------------------------------- */
-/* WHAT WE DO SECTION — MUST BE OUTSIDE MEDIA */
+/* WHAT WE DO */
 /* --------------------------------------------- */
 
 .what-we-do {
@@ -119,7 +115,7 @@ body {
 
 /* SERVICES GRID */
 .services {
-    
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
@@ -131,7 +127,6 @@ body {
     text-align: center;
 }
 
-/* ICON STYLE */
 .ico {
     font-size: 80px;
     color: #FF6565;
@@ -153,24 +148,70 @@ body {
 }
 
 /* --------------------------------------------- */
-/* MOBILE RESPONSIVE */
+/* OUR RESULTS */
 /* --------------------------------------------- */
+
+.our-results {
+    background-image: url("images/headphones_hero_2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.results-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.our-results h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.our-results p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 60px;
+}
+
+.results-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+    width: 22%;
+    min-width: 200px;
+    padding: 50px 20px 40px;
+    background-image: url("images/pentagon.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.card .percent {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card .label {
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVE */
 @media (max-width: 480px) {
     .nav-links {
         display: none;
     }
 
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero h2 {
-        font-size: 14px;
-    }
-
-    .hero p {
-        font-size: 12px;
-    }
+    .hero h1 { font-size: 28px; }
+    .hero h2 { font-size: 14px; }
+    .hero p { font-size: 12px; }
 
     .services {
         flex-direction: column;
@@ -179,5 +220,14 @@ body {
 
     .service-item {
         width: 100%;
+    }
+
+    .results-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
     }
 }
