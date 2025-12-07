@@ -155,6 +155,7 @@ body {
     background-image: url("images/headphones_hero_2.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     padding: 100px 20px;
     text-align: center;
     color: white;
@@ -187,9 +188,9 @@ body {
     width: 22%;
     min-width: 200px;
     padding: 50px 20px 40px;
-    background-image: url("images/pentagon.png");
+    background-image: url("images/background-image.png");
     background-size: cover;
-    background-position: center;
+    
     text-align: center;
 }
 
@@ -204,7 +205,7 @@ body {
 }
 
 /* MOBILE RESPONSIVE */
-@media (max-width: 480px) {
+
     .nav-links {
         display: none;
     }
@@ -229,5 +230,64 @@ body {
 
     .card {
         width: 80%;
+    }
+.contact-us {
+    text-align: center;
+    padding: 80px 20px;
+    color: #071629;
+}
+
+.contact-us h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* FORM CONTAINER */
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* LABELS */
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #071629;
+}
+
+/* INPUTS */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* BUTTON */
+.contact-btn {
+    background-color: #FF6565;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .contact-form {
+        width: 100%;
     }
 }
