@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+}
+
+/* Container (centers the content) */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #FF6565;
+}
+
+/* HERO SECTION */
+.hero {
+    background-image: url("images/BACKGROUND.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+/* Titles */
+.hero h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+    background-color: #FF6565;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.cta-btn:hover {
+    opacity: 0.9;
+}
+
+/* Paragraph */
+.hero p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* MOBILE RESPONSIVE (≤ 480px) */
+@media (max-width: 480px) {
+    .nav-links {
+        display: none; /* Navigation hidden in mobile (hamburger added in Task 8) */
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 14px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+}
